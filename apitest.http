@@ -1,0 +1,6 @@
+
+@hostname=http://localhost:8000/api
+
+
+### get all rooms
+GET {{hostname}}/rooms/getallrooms HTTP/1.1
