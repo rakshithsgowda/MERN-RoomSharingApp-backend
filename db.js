@@ -1,8 +1,13 @@
 const mongoose = require('mongoose')
 
+const password = process.env.DATABASE_PASSWORD
+const connection = process.env.DATABASE_PRODUCTION.replace(
+  '<password>',
+  password
+)
 // db connection
 mongoose
-  .connect(process.env.DATABASE_LOCAL, {
+  .connect(connection, {
     useunifiedTopology: true,
     useNewUrlParser: true,
   })
